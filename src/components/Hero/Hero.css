@@ -1,7 +1,34 @@
-.hero-section{
-    /* background-color: red; */
+.herotext {
+    right: 0%;
+    font-size: 5rem;
+  padding: 2vw;
+  /* font-weight: 700; */
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 120px;
+  
 }
 
-.herogif{
-    /* background-color: blue; */
+
+.bgimg{
+    width: 100%;
+    height: 90vh;
 }
+
+.blur-overlay {
+    display: flex;
+    /* Adjust background color and opacity */
+    opacity: 0.3;
+    backdrop-filter: blur(10px); /* Apply the blur effect */
+    /* Add padding for spacing */
+    box-shadow: 0 0 20px transparent;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .herotext {
+    z-index: 1; 
+    opacity: 1;
+  }
