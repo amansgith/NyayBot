@@ -102,7 +102,7 @@ const Chat = () => {
       </div>
 
       {/* Chat Input */}
-      <div className="sticky bottom-0 left-0 w-full bg-white shadow-md p-3 flex rounded-lg mx-auto mb-2 border border-yellow-500 max-w-4xl">
+      <div className="sticky z-10 bottom-0 left-0 w-full bg-white shadow-md p-3 flex rounded-lg mx-auto mb-2 border border-yellow-500 max-w-4xl">
         <label className="cursor-pointer p-2">
           <Paperclip size={22} className="text-yellow-700" />
           <input
