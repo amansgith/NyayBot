@@ -13,12 +13,13 @@ const Navbar = () => {
         
         {/* Logo Section */}
         <div className="flex items-center gap-2">
+          <Link to="/" className="flex gap-2">
           <img src={logo} alt="Logo" className="w-10 h-10" />
-          <h1 className="text-3xl font-bold text-yellow-700">NyayBot</h1>
+          <h1 className="text-3xl font-bold text-yellow-700">NyayBot</h1></Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-6 text-lg text-gray-800">
+        <div className="hidden md:flex gap-6 text-2xl text-gray-800">
           <Link to="/" className="hover:text-yellow-600">Home</Link>
           <Link to="/conversation" className="hover:text-yellow-600">Chatbot</Link>
           <Link to="/signup" className="hover:text-yellow-600">Appointment</Link>
