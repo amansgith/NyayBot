@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import { Home } from './pages/Homepage/Home';
 import Chat from './pages/Chatbot/Chat';
+import Livechat from './pages/Livechat/Livechat';
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' exact Component={Home}/>
-        <Route path='/conversation' Component={Chat} />
+        <Route path='/api/conversation' Component={Chat} />
+        <Route path='/api/livechat' Component={Livechat} />
       </Routes>
     </>
   )

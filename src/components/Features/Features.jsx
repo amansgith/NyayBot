@@ -1,6 +1,7 @@
 import { Briefcase, FileText, UserCheck } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import './Features.css'
+import "./Features.css";
+import ParticlesBackground from "../Particle";
 
 const features = [
   {
@@ -31,7 +32,10 @@ const features = [
 const Features = () => {
   const navigate = useNavigate();
   return (
-    <div id="next-section" className="bg-gray-100 px-6">
+    <div id="next-section" className=" px-6">
+      <div className="absolute inset-0 -z-10">
+        <ParticlesBackground />
+      </div>
       {/* Section Heading */}
       <h2 className="text-3xl font-bold text-center text-yellow-800 mb-5">
         What We Offer
@@ -59,7 +63,7 @@ const Features = () => {
               </p>
               <button
                 className="mt-3 bg-yellow-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-yellow-800 transition"
-                onClick={() => feature.linkToChat && navigate("/conversation")}
+                onClick={() => feature.linkToChat && navigate("/api/conversation")}
               >
                 Learn More
               </button>

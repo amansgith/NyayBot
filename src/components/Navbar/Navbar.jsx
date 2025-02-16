@@ -21,8 +21,8 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex gap-6 text-2xl text-gray-800">
           <Link to="/" className="hover:text-yellow-600">Home</Link>
-          <Link to="/conversation" className="hover:text-yellow-600">Chatbot</Link>
-          <Link to="/signup" className="hover:text-yellow-600">Appointment</Link>
+          <Link to="/api/conversation" className="hover:text-yellow-600">Chatbot</Link>
+          <Link to="/api/livechat" className="hover:text-yellow-600">Appointment</Link>
           <img src={profile} alt="Profile" className="w-10 h-10 rounded-full" />
         </div>
 

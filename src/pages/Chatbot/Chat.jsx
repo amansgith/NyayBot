@@ -6,6 +6,9 @@ import {
   FileText,
   MessageCircle,
 } from "lucide-react";
+import './Chat.css'
+
+import ParticlesBackground from "../../components/Particle";
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
@@ -47,31 +50,32 @@ const Chat = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gradient-to-b from-yellow-300 to-orange-200">
+    <div className="z-1 flex flex-col h-screen">
       {/* Chat Header */}
-      <div className="bg-gradient-to-r from-yellow-600 to-yellow-700 text-white p-4 text-lg font-semibold text-center">
+        <ParticlesBackground/>
+      <div className="z-2 bg-gradient-to-r from-yellow-600 to-yellow-700 text-white p-4 text-lg font-semibold text-center">
         Legal Advisor Chatbot
       </div>
 
       {/* Welcome Message & Features */}
       {messages.length === 0 && (
-        <div className="text-center text-gray-900 italic mt-6 text-lg">
+        <div className="z-3 text-center text-gray-900 italic mt-6 text-xl">
           🤖 Welcome to the Legal Advisor Chatbot!
-          <p className="text-gray-700">
+          <p className="text-blue-300">
             Ask your legal questions or upload a document for insights.
           </p>
           {/* Features Section */}
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6">
+          <div className="mt-6 mx-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12 px-6">
             <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center transition transform hover:scale-105">
               <ShieldCheck size={40} className="text-yellow-700 mb-3" />
               <h3 className="text-xl font-semibold text-gray-900">
-                AI Legal Advice
+                AI Powered Legal Advice
               </h3>
             </div>
             <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center transition transform hover:scale-105">
               <FileText size={40} className="text-yellow-700 mb-3" />
               <h3 className="text-xl font-semibold text-gray-900">
-                Document Summarizer
+                Legal Document Summarizer
               </h3>
             </div>
           </div>
@@ -81,7 +85,7 @@ const Chat = () => {
       {/* Chat Messages Container (Now Starts from Header) */}
       <div
         ref={chatContainerRef}
-        className="flex-1 p-4 overflow-y-auto space-y-3 mt-4"
+        className="flex-1 z-1 p-4 overflow-y-auto space-y-3 mt-4"
       >
         {messages.map((msg, index) => (
           <div

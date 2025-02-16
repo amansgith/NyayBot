@@ -1,5 +1,5 @@
 import React from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+// import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import {Scale} from 'lucide-react'
 import "./Hero.css";
 
@@ -13,13 +13,13 @@ const Hero = () => {
       };
 
   return (
-    <div className="relative bg-gray-100 h-screen flex items-center justify-center">
+    <div className="relative h-screen flex items-center justify-center">
       {/* Background Image */}
       <img
         className="bgimg absolute inset-0 w-full h-full object-cover brightness-75"
         src="https://cdn.pixabay.com/photo/2024/04/06/17/32/ai-generated-8679700_1280.jpg"
         alt="Legal Advisor Background"
-      />
+        />
 
       {/* Overlay Text */}
       <div className="relative text-center text-white max-w-3xl px-6">
