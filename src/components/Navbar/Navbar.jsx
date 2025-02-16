@@ -36,8 +36,8 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden absolute top-16 left-0 w-full bg-white shadow-md p-5 flex flex-col items-center space-y-4 text-lg text-gray-800">
           <Link to="/" className="hover:text-yellow-600" onClick={() => setIsOpen(false)}>Home</Link>
-          <Link to="/conversation" className="hover:text-yellow-600" onClick={() => setIsOpen(false)}>Chatbot</Link>
-          <Link to="/signup" className="hover:text-yellow-600" onClick={() => setIsOpen(false)}>Appointment</Link>
+          <Link to="/api/conversation" className="hover:text-yellow-600" onClick={() => setIsOpen(false)}>Chatbot</Link>
+          <Link to="/api/livechat" className="hover:text-yellow-600" onClick={() => setIsOpen(false)}>Appointment</Link>
           <img src={profile} alt="Profile" className="w-12 h-12 rounded-full" />
         </div>
       )}
