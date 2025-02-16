@@ -7,7 +7,7 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <>
-        <nav className='flex justify-between text-2xl p-6 pl-8 pr-8'>
+        <nav className='sticky top-0 z-1 flex justify-between text-2xl p-6 pl-8 pr-8'>
             <div className="brand flex gap-2">
                 <img src={logo} alt="Logo" />
                 <h1 className="brand-name text-3xl">NyayBot</h1>

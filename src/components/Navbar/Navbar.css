@@ -3,6 +3,11 @@
 }
 
 .nav-items{
+    z-index: 1;
     font-weight: 500;
     justify-content: center;
+}
+
+nav{
+    backdrop-filter: blur(10px);
 }
