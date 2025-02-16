@@ -13,6 +13,7 @@ import ParticlesBackground from "../../components/Particle";
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
   const chatContainerRef = useRef(null);
 
   useEffect(() => {
@@ -30,6 +31,7 @@ const Chat = () => {
     const userMessage = { text: input, sender: "user" };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
+    setLoading(true);
 
     try {
       const response = await fetch("http://localhost:8000/chat", {
@@ -46,11 +48,13 @@ const Chat = () => {
         ...prev,
         { text: "Error fetching response.", sender: "bot" },
       ]);
+    }finally {
+      setLoading(false); // Re-enable send button after response
     }
   };
 
   return (
-    <div className="z-1 flex flex-col h-screen">
+    <div className="z-1 sticky flex flex-col h-screen">
       {/* Chat Header */}
         <ParticlesBackground/>
       <div className="z-2 bg-gradient-to-r from-yellow-600 to-yellow-700 text-white p-4 text-lg font-semibold text-center">
@@ -121,11 +125,15 @@ const Chat = () => {
           onKeyDown={(e) => e.key === "Enter" && sendMessage()}
         />
 
+        {/* Send Button (Disabled During Response) */}
         <button
-          className="cursor-pointer bg-yellow-700 text-white p-2 rounded-lg ml-2"
+          className={`cursor-pointer bg-yellow-700 text-white p-2 rounded-lg ml-2 transition ${
+            loading ? "opacity-50 cursor-not-allowed" : "hover:bg-yellow-800"
+          }`}
           onClick={sendMessage}
+          disabled={loading}
         >
-          <Send size={20} />
+          {loading ? "⏳" : <Send size={20} />}
         </button>
       </div>
     </div>
