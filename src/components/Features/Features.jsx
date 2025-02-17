@@ -10,6 +10,7 @@ const features = [
     icon: <Briefcase size={80} className="text-yellow-700" />,
     image: "https://cdn-icons-png.flaticon.com/512/8915/8915768.png",
     linkToChat: true,
+    path: "/api/conversation",
   },
   {
     title: "Document Summarizer",
@@ -18,6 +19,7 @@ const features = [
     icon: <FileText size={80} className="text-yellow-700" />,
     image: "https://cdn-icons-png.flaticon.com/512/9422/9422946.png",
     linkToChat: true,
+    path: "/api/conversation",
   },
   {
     title: "Live Lawyer Assistance",
@@ -25,7 +27,8 @@ const features = [
       "Connect with professional lawyers in real-time for legal advice via chat.",
     icon: <UserCheck size={80} className="text-yellow-700" />,
     image: "https://cdn-icons-png.flaticon.com/512/3611/3611429.png",
-    linkToChat: false,
+    linkToChat: true,
+    path: "/api/livechat"
   },
 ];
 
@@ -63,7 +66,7 @@ const Features = () => {
               </p>
               <button
                 className="mt-3 bg-yellow-700 text-white px-5 py-2 rounded-lg shadow-md hover:bg-yellow-800 transition"
-                onClick={() => feature.linkToChat && navigate("/api/conversation")}
+                onClick={() => feature.linkToChat && navigate(`${feature.path}`)}
               >
                 Learn More
               </button>
