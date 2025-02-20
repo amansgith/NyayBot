@@ -5,9 +5,11 @@ import ParticlesBackground from "../../components/Particle";
 
 const userId = `user_${Math.random().toString(36).substring(2, 10)}`; // Unique user ID
 
-const socket = io("http://localhost:8000", {
+const socket = io("https://your-backend.onrender.com", {
   transports: ["websocket", "polling"],
-  path: "/socket.io/"
+  reconnection: true, // Try reconnecting if connection is lost
+  reconnectionAttempts: 5, // Limit retries
+  reconnectionDelay: 5000 // Wait 5 sec before retry
 });
 
 const Livechat = () => {

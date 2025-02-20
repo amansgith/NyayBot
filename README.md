@@ -1,8 +1,10 @@
-# React + Vite
+# NyayBot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NyayBot is an AI-powered legal platform designed to simplify access to legal support. It offers four core features: an AI chatbot for instant legal advice, legal document summarization, live chat with professional lawyers, and machine learning-based case-winning prediction. The platform follows a flexible business model offering the Free Plan which provides a glance at our services with some limitations, while the Premium Plan offers unlimited usage of the AI-related features and complete assistance from the Legal Associates with our Platform.
 
-Currently, two official plugins are available:
+## Live Link
+[Visit NyayBot](https://nyay-bot-tau.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Live Chat
+You may see the currently only the static site and not it working features becuase the backend has not been deployed yet. Hence we have provided with the demo video of the project.
+[Demo Video](https://drive.google.com/file/d/1xQ5Q8Q6)
