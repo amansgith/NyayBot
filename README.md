@@ -7,4 +7,4 @@ NyayBot is an AI-powered legal platform designed to simplify access to legal sup
 
 ### Live Chat
 You may see the currently only the static site and not it working features becuase the backend has not been deployed yet. Hence we have provided with the demo video of the project.
-[Demo Video](https://drive.google.com/file/d/1xQ5Q8Q6)
+[Demo Video](https://drive.google.com/file/d/1QuyUZ1YudVjUi9c2zpEBuOT4NU0zSBwX/view?usp=sharing)
